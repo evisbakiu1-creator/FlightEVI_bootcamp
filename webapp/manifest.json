@@ -59,7 +59,8 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.templates": {}
+        "sap.fe.templates": {},
+        "sap.ui.vbm": {}
       }
     },
     "contentDensities": {
@@ -160,7 +161,21 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Flight/_DetailEVI"
+              "contextPath": "/Flight/_DetailEVI",
+              "content": {
+                "body": {
+                  "sections": {
+                    "GeoMap": {
+                      "template": "zflight.flightlistrepevi.ext.fragment.GeoMap",
+                      "position": {
+                        "placement": "After",
+                        "anchor": "General Information (ID: GeneralInfo)"
+                      },
+                      "title": "Itinerary"
+                    }
+                  }
+                }
+              }
             }
           }
         }
