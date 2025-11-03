@@ -71,17 +71,12 @@
         "sap.fe.macros": {},
         "sap.ui.vbm": {}
       }
-    },"actions": {
-  "GoToWeb": {
-    "id": "GoToWeb",
-    "text": "Go to Web",
-    "press": "zflight.flightlistrepevi.ext.handlers.ObjectPageHandler.onGoToWeb",
-    "visible": true,
-    "enabled": true,
-    "requiresSelection": false
-  }
-},
-  
+    },
+    "controllerExtensions": {
+      "sap.fe.templates.ObjectPage.ObjectPageController": {
+        "controllerName": "zflight.flightlistrepevi.ext.controller.ext.handlers.ObjectPageHandler"
+      }
+    },
     "contentDensities": {
       "compact": true,
       "cozy": true
@@ -173,12 +168,13 @@
               "content": {
                 "header": {
                   "actions": {
-                    "ext/handlers/ObjectPageHandler": {
-                      "press": "zflight.flightlistrepevi.ext.controller.ext/handlers/ObjectPageHandler.onGoToWeb",
+                    "GoToWeb": {
+                      "id": "GoToWeb",
+                      "text": "Go to Web",
+                      "press": "onGoToWeb",
                       "visible": true,
                       "enabled": true,
-                      "requiresSelection": false,
-                      "text": "Go To Web"
+                      "requiresSelection": false
                     }
                   }
                 }
