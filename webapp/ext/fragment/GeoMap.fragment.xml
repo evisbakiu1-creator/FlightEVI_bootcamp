@@ -9,7 +9,6 @@
 
     <HBox id="itineraryBar" class="sapUiSmallMarginBottom">
       <Text id="txtConfirmedOn" text="The bookings were confirmed on" class="sapUiTinyMarginEnd"/>
-      <!-- Use properties that exist on FlightDetailsEVIType -->
       <macros:Field id="fldCreatedAt" readOnly="true" metaPath="LocalCreatedAt"/>
       <Text id="txtFor" text="for airline" class="sapUiTinyMarginBeginEnd"/>
       <macros:Field id="fldCarrid" readOnly="true" metaPath="Carrid"/>

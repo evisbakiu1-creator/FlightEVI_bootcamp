@@ -52,15 +52,14 @@
       "phone": true
     }
   },
-"GeoMap": {
-  "template": "zflight.flightlistrepevi.ext.fragment.GeoMap",
-  "title": "Itinerary",
-  "position": {
-    "placement": "After",
-    "anchor": "Flight Details (ID: FlightDetails)"
-  }
-},
-  
+  "GeoMap": {
+    "template": "zflight.flightlistrepevi.ext.fragment.GeoMap",
+    "title": "Itinerary",
+    "position": {
+      "placement": "After",
+      "anchor": "Flight Details (ID: FlightDetails)"
+    }
+  },
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
@@ -69,10 +68,20 @@
         "sap.m": {},
         "sap.ui.core": {},
         "sap.fe.templates": {},
-         "sap.fe.macros": {},
+        "sap.fe.macros": {},
         "sap.ui.vbm": {}
       }
-    },
+    },"actions": {
+  "GoToWeb": {
+    "id": "GoToWeb",
+    "text": "Go to Web",
+    "press": "zflight.flightlistrepevi.ext.handlers.ObjectPageHandler.onGoToWeb",
+    "visible": true,
+    "enabled": true,
+    "requiresSelection": false
+  }
+},
+  
     "contentDensities": {
       "compact": true,
       "cozy": true
@@ -158,6 +167,19 @@
                 "_DetailEVI": {
                   "detail": {
                     "route": "FlightDetailsEVIObjectPage"
+                  }
+                }
+              },
+              "content": {
+                "header": {
+                  "actions": {
+                    "ext/handlers/ObjectPageHandler": {
+                      "press": "zflight.flightlistrepevi.ext.controller.ext/handlers/ObjectPageHandler.onGoToWeb",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "Go To Web"
+                    }
                   }
                 }
               }
