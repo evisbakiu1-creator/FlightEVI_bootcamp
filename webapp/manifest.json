@@ -52,6 +52,15 @@
       "phone": true
     }
   },
+"GeoMap": {
+  "template": "zflight.flightlistrepevi.ext.fragment.GeoMap",
+  "title": "Itinerary",
+  "position": {
+    "placement": "After",
+    "anchor": "Flight Details (ID: FlightDetails)"
+  }
+},
+  
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {

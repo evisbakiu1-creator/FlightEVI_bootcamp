@@ -7,12 +7,12 @@
 
   <VBox id="itineraryVBox">
 
-
     <HBox id="itineraryBar" class="sapUiSmallMarginBottom">
       <Text id="txtConfirmedOn" text="The bookings were confirmed on" class="sapUiTinyMarginEnd"/>
-      <macros:Field id="fldCreatedAt" readOnly="true" metaPath="CreatedAt"/>
-      <Text id="txtBy" text="by" class="sapUiTinyMarginBeginEnd"/>
-      <macros:Field id="fldAgencyId" readOnly="true" metaPath="AgencyID"/>
+      <!-- Use properties that exist on FlightDetailsEVIType -->
+      <macros:Field id="fldCreatedAt" readOnly="true" metaPath="LocalCreatedAt"/>
+      <Text id="txtFor" text="for airline" class="sapUiTinyMarginBeginEnd"/>
+      <macros:Field id="fldCarrid" readOnly="true" metaPath="Carrid"/>
     </HBox>
 
     
@@ -23,6 +23,7 @@
                      initialPosition="0;30">
 
       <vbm:vos>
+
         <vbm:Routes id="routesItinerary">
           <vbm:Route id="routeFraJfk"
                      position="8.682127;50.110924;0;-73.780968;40.641766;0"
@@ -38,6 +39,7 @@
                      start="0" end="1" linewidth="2"/>
         </vbm:Routes>
 
+        <!-- Spots for the three airports -->
         <vbm:Spots id="spotsItinerary">
           <vbm:Spot id="spotFRA"
                     position="8.682127;50.110924;0"
@@ -52,8 +54,9 @@
                     tooltip="San Francisco (SFO)"
                     type="Error"/>
         </vbm:Spots>
-      </vbm:vos>
 
+      </vbm:vos>
     </vbm:AnalyticMap>
+
   </VBox>
 </core:FragmentDefinition>
